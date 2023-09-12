@@ -12,7 +12,7 @@ export interface UserData {
     birthday: string;
 }
 
-const Logedin = () => {
+const HomeLogin = () => {
   const [user, setUser] = useState<UserData|null>(null);
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
@@ -56,4 +56,4 @@ const Logedin = () => {
   );
 };
 
-export default Logedin;
+export default HomeLogin;
