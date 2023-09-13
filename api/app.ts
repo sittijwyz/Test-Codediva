@@ -146,4 +146,22 @@ app.post("/authen", jsonParser, async (req: Request, res: Response) => {
   }
 });
 
+app.get("/menu",jsonParser, async (req: Request, res: Response) => {
+  try {
+    const results = await new Promise((resolve, reject) => {
+      db.query("SELECT * FROM menu", (err, results) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(results);
+        }
+      });
+    });
+    return res.status(200).json(results);
+  } catch (err) {
+    console.error(err);
+    return res.status(500).send();
+  }
+});
+
 app.listen(port, () => console.log(`Application is running on port ${port}`));

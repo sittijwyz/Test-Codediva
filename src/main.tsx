@@ -8,6 +8,7 @@ import Register from "./components/Register.tsx";
 import HomeLogin from "./components/HomeLogin.tsx";
 // import Profile from './components/Profile.tsx';
 import App from "./App.tsx";
+import Menu from "./components/Menu.tsx";
 
 const router = createBrowserRouter([
   {
@@ -26,10 +27,10 @@ const router = createBrowserRouter([
     path: "homeLogin",
     element: <HomeLogin />,
   },
-  // {
-  //   path:"profile",
-  //   element: <Profile/>
-  // }
+  {
+    path:"menu",
+    element: <Menu/>
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

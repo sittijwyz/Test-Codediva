@@ -69,9 +69,6 @@ var i;
                 {user.fname} {user.lname}
               </p>
             </section>
-            <section>
-              <Link to ="/profile" >Profile</Link> 
-            </section>
             <section className=" mt-auto ">
               <ul className="w-full">
                 <li
